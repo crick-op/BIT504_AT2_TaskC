@@ -19,7 +19,7 @@ import java.awt.Stroke;
 	 GameState gameState = GameState.INITIALISING;
 	 Paddle paddle1;
 	 Paddle paddle2;
-	 private final static int BALL_MOVEMENT_SPEED = 2;
+	 private final static int BALL_MOVEMENT_SPEED = 4;
 	  private final static int POINTS_TO_WIN = 3;
 	  int player1Score = 0, player2Score = 0;
 	  Player gameWinner;
@@ -50,13 +50,13 @@ private final static String WINNER_TEXT = "WIN!";
 	@Override
 	public void keyPressed(KeyEvent event) {
         if(event.getKeyCode() == KeyEvent.VK_W) {
-            paddle1.setyVelocity(-1);
+            paddle1.setyVelocity(-5);
         } else if(event.getKeyCode() == KeyEvent.VK_S) {
-            paddle1.setyVelocity(1);
+            paddle1.setyVelocity(5);
         }if(event.getKeyCode() == KeyEvent.VK_UP) {
-            paddle2.setyVelocity(-1);
+            paddle2.setyVelocity(-5);
        } else if(event.getKeyCode() == KeyEvent.VK_DOWN) {
-            paddle2.setyVelocity(1);
+            paddle2.setyVelocity(5);
         }
 		
 	}
